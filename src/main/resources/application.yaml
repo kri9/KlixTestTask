@@ -1,0 +1,10 @@
+spring.application.name: KlixDemoApp
+
+application:
+  status-polling-time: 120
+  fast-uris:
+    submit-uri: https://shop.stage.klix.app/api/FastBank/applications
+    application-uri: https://shop.stage.klix.app/api/FastBank/applications/%s
+  solid-uris:
+    submit-uri: https://shop.stage.klix.app/api/SolidBank/applications
+    application-uri: https://shop.stage.klix.app/api/SolidBank/applications/%s
