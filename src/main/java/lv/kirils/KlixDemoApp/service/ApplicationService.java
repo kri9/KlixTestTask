@@ -76,6 +76,7 @@ public class ApplicationService {
     try {
       Awaitility.await()
           .atMost(Duration.ofSeconds(applicationProperties.statusPollingTime()))
+          .pollDelay(Duration.ZERO)
           .pollInterval(Duration.ofSeconds(5))
           .until(() -> statusIsProcessed(uris.getApplicationUri(id)));
       return Optional.ofNullable(restTemplate.getForObject(uris.getApplicationUri(id), BankApplicationResponse.class));
